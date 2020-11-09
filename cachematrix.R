@@ -1,12 +1,12 @@
 ## The first function creates a matrix and also calculates its inverse. To do so, it makes 
-## use of lexical scoping whereby the object m gets a null val and can be modified throughout the 
+## use of lexical scoping whereby the object "inverse" gets a null value and can be modified throughout the 
 ## function execution.
 
 makeCacheMatrix <- function(x = matrix()) {
   inverse <- NULL
   set <- function(y=4) {
     x <<- y
-    inv <<- NULL
+    inverse <<- NULL
   }
   get <- function() x
   setinv <- function(mean) inverse <<- solve
@@ -30,5 +30,5 @@ cacheSolve <- function(x, ...) {
   data <- x$get()
   inverse <- solve(data, ...)
   x$setinv(inverse)
-  m
+  inverse
 }
