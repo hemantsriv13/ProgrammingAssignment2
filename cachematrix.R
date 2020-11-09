@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## The first function creates a matrix and also calculates its inverse. To do so, it makes 
+## use of lexical scoping whereby the object m gets a null val and can be modified throughout the 
+## function execution.
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -18,7 +17,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The cacheSolve function checks if the value of the matrix inverse is present in the cache. 
+## If not, it calculates in and stores in in the cache.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
